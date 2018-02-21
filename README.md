@@ -1,4 +1,4 @@
-# google-places-api
+# google-places
 
 TODO: Write a description here
 
@@ -8,14 +8,14 @@ Add this to your application's `shard.yml`:
 
 ```yaml
 dependencies:
-  google-places-api:
-    github: [your-github-name]/google-places-api
+  google-places:
+    github: [your-github-name]/google-places
 ```
 
 ## Usage
 
 ```crystal
-require "google-places-api"
+require "google-places"
 ```
 
 TODO: Write usage instructions here
@@ -26,7 +26,7 @@ TODO: Write development instructions here
 
 ## Contributing
 
-1. Fork it ( https://github.com/[your-github-name]/google-places-api/fork )
+1. Fork it ( https://github.com/[your-github-name]/google-places/fork )
 2. Create your feature branch (git checkout -b my-new-feature)
 3. Commit your changes (git commit -am 'Add some feature')
 4. Push to the branch (git push origin my-new-feature)

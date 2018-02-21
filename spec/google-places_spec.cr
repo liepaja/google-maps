@@ -1,6 +1,6 @@
 require "./spec_helper"
 
-describe Google::Places::Api do
+describe GooglePlaces do
   # TODO: Write tests
 
   it "works" do
