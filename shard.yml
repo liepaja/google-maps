@@ -1,0 +1,9 @@
+name: google-places-api
+version: 0.1.0
+
+authors:
+  - Ernests Elksnis <eelksnis@yahoo.com>
+
+crystal: 0.24.1
+
+license: MIT
