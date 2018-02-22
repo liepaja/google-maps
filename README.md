@@ -9,7 +9,7 @@ Add this to your application's `shard.yml`:
 ```yaml
 dependencies:
   google-places:
-    github: [your-github-name]/google-places
+    github: liepaja/google-places
 ```
 
 ## Usage
@@ -26,7 +26,7 @@ TODO: Write development instructions here
 
 ## Contributing
 
-1. Fork it ( https://github.com/[your-github-name]/google-places/fork )
+1. Fork it ( https://github.com/liepaja/google-places/fork )
 2. Create your feature branch (git checkout -b my-new-feature)
 3. Commit your changes (git commit -am 'Add some feature')
 4. Push to the branch (git push origin my-new-feature)
@@ -34,4 +34,4 @@ TODO: Write development instructions here
 
 ## Contributors
 
-- [[your-github-name]](https://github.com/[your-github-name]) Ernests Elksnis - creator, maintainer
+- [liepaja](https://github.com/liepaja) Ernests Elksnis - creator, maintainer
