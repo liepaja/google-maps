@@ -1,6 +1,6 @@
 # google-places
 
-TODO: Write a description here
+Crystal wrapper around the Google Places API
 
 ## Installation
 
@@ -18,11 +18,39 @@ dependencies:
 require "google-places"
 ```
 
-TODO: Write usage instructions here
+## `Place Autocomplete`
+### `https://developers.google.com/places/web-service/autocomplete`
+
+Default options
+```crystal
+#GooglePlaces::Api::Client.new(api_key : String, @format = Formats::Json, tls = true)
+client = GooglePlaces::Api::Client.new("AIzaSyAdutrZU_b83yb4Otn-6yuJ79QvFR9anIM") # Xml currently not supported 
+
+response = client.autocomplete("Riga")
+response.status # Ok
+response.predictions[0].description # Riga, Latvia
+```
+
+Custom options
+```crystal
+client = GooglePlaces::Api::Client.new("AIzaSyAdutrZU_b83yb4Otn-6yuJ79QvFR9anIM")
+
+response = client.autocomplete("Riga", {"types" => "(cities)", "language" => "nl"})
+response.status # Ok
+response.predictions[0].description # Riga, Letland
+```
+
+OpenSSL workaround 
+```crystal
+# Some users face OpenSSL issues, in this case tls can be made insecure
+client = GooglePlaces::Api::Client.new("AIzaSyAdutrZU_b83yb4Otn-6yuJ79QvFR9anIM", GooglePlaces::Formats::Json, tls = false)
+```
 
 ## Development
 
-TODO: Write development instructions here
+- Expand api
+- Write tests
+- Solve OpenSSL issues
 
 ## Contributing
 
