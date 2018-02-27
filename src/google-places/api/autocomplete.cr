@@ -6,7 +6,11 @@ module GooglePlaces
       def autocomplete(input : String, options = {} of String => String)
         options = options.merge({"input" => input})
         response = get(Path, options)
-        GooglePlaces::Models::Response.from_json(response).to_json
+        response = GooglePlaces::Models::Response.from_json(response)
+        if response.status != "OK"
+          raise "Response from Google not OK"
+        end
+        response.predictions
       end
     end
   end
